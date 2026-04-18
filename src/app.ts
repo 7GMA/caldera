@@ -4,6 +4,10 @@ import helmet from "@fastify/helmet";
 import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
 import { healthRoutes } from "./routes/health.js";
+import { authUrlRoutes } from "./routes/auth/url.js";
+import { authCallbackRoutes } from "./routes/auth/callback.js";
+import { appleConnectRoutes } from "./routes/auth/appleConnect.js";
+import authPlugin from "./plugins/authPlugin.js";
 import { logger } from "./lib/logger.js";
 
 export async function buildApp() {
@@ -45,16 +49,18 @@ export async function buildApp() {
   });
 
   await app.register(healthRoutes);
+  await app.register(authPlugin);
 
-  // v1 prefix — routes registered here in subsequent milestones
   await app.register(
     async (v1) => {
-      // placeholder — M1+ routes registered here
-      v1.get("/", async () => ({
+      v1.get("/", { logLevel: "silent" }, async () => ({
         name: "caldera",
         version: "0.1.0",
         docs: "/docs",
       }));
+      await v1.register(authUrlRoutes);
+      await v1.register(authCallbackRoutes);
+      await v1.register(appleConnectRoutes);
     },
     { prefix: "/v1" },
   );

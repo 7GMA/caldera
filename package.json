@@ -32,6 +32,7 @@
     "@fastify/swagger-ui": "^5.2.1",
     "drizzle-orm": "^0.42.0",
     "fastify": "^5.2.1",
+    "fastify-plugin": "^5.1.0",
     "fastify-type-provider-zod": "^4.0.2",
     "googleapis": "^144.0.0",
     "ical.js": "^2.2.1",
@@ -59,6 +60,9 @@
     "vitest": "^3.1.1"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@node-rs/argon2", "esbuild"]
+    "onlyBuiltDependencies": [
+      "@node-rs/argon2",
+      "esbuild"
+    ]
   }
 }
