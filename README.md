@@ -85,7 +85,7 @@ See [docs/concepts/auth.md](docs/concepts/auth.md) for the full auth model.
 
 ## Used in production
 
-[Daily](https://usedaily.site) — an AI-powered calendar assistant — uses Caldera as its calendar backend, connecting Google, Microsoft, and Apple accounts through this API.
+[daily](https://usedaily.site) — an AI-powered calendar assistant — uses Caldera as its calendar backend, connecting Google, Microsoft, and Apple accounts through this API.
 
 ---
 
