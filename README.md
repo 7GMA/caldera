@@ -92,3 +92,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). All contributions welcome.
 ## License
 
 [Apache-2.0](LICENSE)
+
+---
+
+Built by [usedaily.site](https://usedaily.site)
