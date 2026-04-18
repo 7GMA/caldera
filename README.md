@@ -83,6 +83,10 @@ pnpm typecheck && pnpm lint && pnpm test
 
 See [docs/concepts/auth.md](docs/concepts/auth.md) for the full auth model.
 
+## Used in production
+
+[Daily](https://usedaily.site) — an AI-powered calendar assistant — uses Caldera as its calendar backend, connecting Google, Microsoft, and Apple accounts through this API.
+
 ---
 
 ## Contributing
@@ -92,7 +96,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). All contributions welcome.
 ## License
 
 [Apache-2.0](LICENSE)
-
----
-
-Built by [usedaily.site](https://usedaily.site)
