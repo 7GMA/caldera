@@ -85,22 +85,6 @@ See [docs/concepts/auth.md](docs/concepts/auth.md) for the full auth model.
 
 ---
 
-## Milestones
-
-- [x] M0 — Scaffold (this release)
-- [ ] M1 — Auth core (api keys, end users, OAuth broker)
-- [ ] M2 — Google read-only
-- [ ] M3 — Google write + incremental sync
-- [ ] M4 — Microsoft
-- [ ] M5 — Apple/CalDAV
-- [ ] M6 — Push webhooks & watches
-- [ ] M7 — Outbound webhooks
-- [ ] M8 — Free/Busy
-- [ ] M9 — Hardening (rate limiting, OTel, Prometheus, idempotency)
-- [ ] M10 — v1.0 release
-
----
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). All contributions welcome.
