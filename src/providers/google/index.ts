@@ -1,5 +1,4 @@
-import type { CalendarProvider, ProviderCapabilities, ProviderContext, UnifiedCalendar, UnifiedEvent, CreateEventInput, UpdateEventInput, ListEventsOptions, FreeBusy, Watch, SubscribeOptions, SyncResult } from "../types.js";
-import type { Page } from "../../lib/pagination.js";
+import type { CalendarProvider, ProviderCapabilities, ProviderContext, CreateEventInput, UpdateEventInput, ListEventsOptions, Watch, SubscribeOptions } from "../types.js";
 import { listCalendars, getCalendar } from "./calendars.js";
 import { listEvents, getEvent, createEvent, updateEvent, deleteEvent } from "./events.js";
 import { freeBusy } from "./freeBusy.js";

@@ -4,13 +4,11 @@ import type {
   CreateEventInput,
   UpdateEventInput,
   ListEventsOptions,
-  EventDateTime,
   EventAttendee,
 } from "../types.js";
 import type { Page } from "../../lib/pagination.js";
 import { graphFetch, graphFetchAll } from "./graphFetch.js";
 import { rruleToGraph, graphToRrule } from "./rrule.js";
-import { v4 as uuidv4 } from "uuid";
 
 interface GraphEvent {
   id: string;

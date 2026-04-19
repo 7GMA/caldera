@@ -1,4 +1,4 @@
-import { eq, and, lte, inArray } from "drizzle-orm";
+import { eq, and, lte } from "drizzle-orm";
 import { db } from "../db/client.js";
 import { webhookDeliveries, outboundWebhooks } from "../db/schema/index.js";
 import { logger } from "../lib/logger.js";

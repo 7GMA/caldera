@@ -1,11 +1,9 @@
 import { eq, and } from "drizzle-orm";
 import { db } from "../db/client.js";
 import { calendarAccounts, syncState, endUsers } from "../db/schema/index.js";
-import { makeCalDAVClient } from "../providers/caldav/client.js";
 import { fetchCTags } from "../providers/caldav/poll.js";
 import { buildProviderContext } from "../services/accounts.js";
 import { logger } from "../lib/logger.js";
-import { decrypt } from "../crypto/encryption.js";
 
 export async function pollCalDAVAccounts(): Promise<void> {
   const accounts = await db

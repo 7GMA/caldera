@@ -10,9 +10,7 @@ export interface WebhookInput {
   eventTypes: string[];
 }
 
-const RETRY_DELAYS_MS = [0, 30_000, 120_000, 600_000, 3_600_000, 21_600_000, 86_400_000, 259_200_000];
-
-export async function listWebhooks(applicationId: string, endUserId?: string) {
+export async function listWebhooks(applicationId: string, _endUserId?: string) {
   return db
     .select()
     .from(outboundWebhooks)
@@ -87,7 +85,7 @@ export async function listDeliveries(webhookId: string, applicationId: string) {
     .where(eq(webhookDeliveries.outboundWebhookId, webhookId));
 }
 
-export async function retryDelivery(deliveryId: string, applicationId: string): Promise<void> {
+export async function retryDelivery(deliveryId: string, _applicationId: string): Promise<void> {
   await db
     .update(webhookDeliveries)
     .set({ status: "pending", nextAttemptAt: new Date(), attempts: 0 })

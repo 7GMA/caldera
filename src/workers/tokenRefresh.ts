@@ -1,7 +1,7 @@
 import { lt, and, eq, sql } from "drizzle-orm";
 import { db } from "../db/client.js";
 import { calendarAccounts } from "../db/schema/index.js";
-import { encrypt, decrypt } from "../crypto/encryption.js";
+import { encrypt } from "../crypto/encryption.js";
 import { refreshAccessToken as googleRefresh } from "../providers/google/oauth.js";
 import { refreshAccessToken as msRefresh } from "../providers/microsoft/oauth.js";
 import { logger } from "../lib/logger.js";

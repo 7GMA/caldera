@@ -10,7 +10,7 @@ export async function healthRoutes(app: FastifyInstance): Promise<void> {
     try {
       await pool.query("SELECT 1");
       return reply.send({ status: "ok", db: "connected" });
-    } catch (err) {
+    } catch {
       return reply.status(503).send({ status: "error", db: "unavailable" });
     }
   });

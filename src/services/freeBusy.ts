@@ -1,4 +1,4 @@
-import { eq, and, inArray } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import { db } from "../db/client.js";
 import { calendarAccounts } from "../db/schema/index.js";
 import { getProvider } from "../providers/registry.js";

@@ -1,8 +1,8 @@
 import type { FastifyInstance } from "fastify";
-import { eq, and } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { v7 as uuidv7 } from "uuid";
 import { db } from "../db/client.js";
-import { watches, calendarAccounts, providerWebhookEvents } from "../db/schema/index.js";
+import { watches, providerWebhookEvents } from "../db/schema/index.js";
 import { timingSafeEqual } from "node:crypto";
 
 export async function providerWebhookRoutes(app: FastifyInstance): Promise<void> {

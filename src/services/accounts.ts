@@ -3,7 +3,6 @@ import { v7 as uuidv7 } from "uuid";
 import { db } from "../db/client.js";
 import { calendarAccounts } from "../db/schema/index.js";
 import { decrypt, encrypt } from "../crypto/encryption.js";
-import { getProvider } from "../providers/registry.js";
 import type { ProviderContext } from "../providers/types.js";
 
 export interface AccountRow {

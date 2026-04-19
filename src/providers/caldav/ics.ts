@@ -1,6 +1,6 @@
 import ICAL from "ical.js";
 import { v4 as uuidv4 } from "uuid";
-import type { UnifiedEvent, CreateEventInput, EventDateTime } from "../types.js";
+import type { UnifiedEvent, CreateEventInput } from "../types.js";
 
 const IGNORED_CALENDARS = [
   "geburtstag", "birthday", "siri", "holiday", "feiertag", "kontakte",

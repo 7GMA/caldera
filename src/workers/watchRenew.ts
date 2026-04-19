@@ -1,9 +1,8 @@
-import { lt, and, eq } from "drizzle-orm";
+import { lt, eq } from "drizzle-orm";
 import { db } from "../db/client.js";
 import { watches, calendarAccounts, endUsers } from "../db/schema/index.js";
 import { getProvider } from "../providers/registry.js";
 import { buildProviderContext } from "../services/accounts.js";
-import { env } from "../config/env.js";
 import { logger } from "../lib/logger.js";
 
 export async function renewExpiringWatches(): Promise<void> {

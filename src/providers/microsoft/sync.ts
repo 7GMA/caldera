@@ -8,12 +8,6 @@ interface GraphDeltaResponse {
   "@odata.deltaLink"?: string;
 }
 
-function mapDeltaEvent(e: Record<string, unknown>, calendarAccountId: string) {
-  const { listEvents } = require("./events.js");
-  // Re-use mapEvent from events.ts via dynamic import stub
-  return e as unknown;
-}
-
 export async function incrementalSync(
   ctx: ProviderContext,
   _calendarId: string,
